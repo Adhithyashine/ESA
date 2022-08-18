@@ -7,21 +7,51 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <link rel="icon" href="img/favicon.ico.ico" type="image" />
     <title>ESA Eco Solutions</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="vendors/linericon/style.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
     <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css" />
     <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
     <link rel="stylesheet" href="vendors/animate-css/animate.css" />
     <link rel="stylesheet" href="vendors/jquery-ui/jquery-ui.css" />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css"
+      rel="stylesheet"
+    />
     <!-- main css -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style3.css" />
+    <link rel="stylesheet" href="animate.css" />
+    <link rel="stylesheet" href="bootstrap.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body>
@@ -55,7 +85,7 @@
               <div class="row w-100 mr-0">
                 <div class="col-lg-7 pr-0">
                   <ul class="nav navbar-nav center_nav pull-right">
-                    <li class="nav-item">
+                    <li class="nav-item active">
                       <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item submenu dropdown">
@@ -90,25 +120,7 @@
                       </ul>
                     </li>
                     <li class="nav-item submenu dropdown">
-                      <a
-                        href="#"
-                        class="nav-link dropdown-toggle"
-                        data-toggle="dropdown"
-                        role="button"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                        >Blog</a
-                      >
-                      <ul class="dropdown-menu">
-                        <li class="nav-item">
-                          <a class="nav-link" href="blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="single-blog.html"
-                            >Blog Details</a
-                          >
-                        </li>
-                      </ul>
+                      <a class="nav-link" href="aboutus.html">About Us </a>
                     </li>
                     <li class="nav-item submenu dropdown">
                       <a
@@ -129,8 +141,8 @@
                         </li>
                       </ul>
                     </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="contact.html">Contact</a>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
                   </ul>
                 </div>
@@ -169,29 +181,169 @@
       </div>
     </header>
     <!--================Header Menu Area =================-->
-
-    <!--================Home Banner Area =================-->
-    <section class="banner_area">
-      <div class="banner_inner d-flex align-items-center">
-        <div class="container">
-          <div
-            class="banner_content d-md-flex justify-content-between align-items-center"
-          >
-            <div class="mb-3 mb-md-0">
-              <h2>Contact Us</h2>
-              <p>Very us move be blessed multiply night</p>
-            </div>
-            <div class="page_link">
-              <a href="index.html">Home</a>
-              <a href="contact.html">Contact Us</a>
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center mb-5">
+            <h2 class="heading-section">ESA Eco Solutions</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="wrapper">
+              <div class="row no-gutters">
+                <div class="col-md-6">
+                  <div class="contact-wrap w-100 p-lg-5 p-4">
+                    <h3 class="mb-4">Send us a message</h3>
+                    <div id="form-message-warning" class="mb-4"></div>
+                    <div id="form-message-success" class="mb-4">
+                      Your message was sent, thank you!
+                    </div>
+                    <form
+                      method="POST"
+                      id="contactForm"
+                      name="contactForm"
+                      class="contactForm"
+                    >
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="name"
+                              id="name"
+                              placeholder="Name"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <input
+                              type="email"
+                              class="form-control"
+                              name="email"
+                              id="email"
+                              placeholder="Email"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="subject"
+                              id="subject"
+                              placeholder="Subject"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <textarea
+                              name="message"
+                              class="form-control"
+                              id="message"
+                              cols="30"
+                              rows="6"
+                              placeholder="Message"
+                            ></textarea>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <input
+                              type="submit"
+                              value="Send Message"
+                              class="btn btn-primary"
+                            />
+                            <div class="submitting"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch">
+                  <div class="info-wrap w-100 p-lg-5 p-4 img">
+                    <h3>Contact Us</h3>
+                    <p class="mb-4">
+                      We're open for any suggestion or just to have a chat
+                    </p>
+                    <div class="dbox w-100 d-flex align-items-start">
+                      <div
+                        class="icon d-flex align-items-center justify-content-center"
+                      >
+                        <span class="fa fa-map-marker"></span>
+                      </div>
+                      <div class="text pl-3">
+                        <p>
+                          <span>Address:</span><br />
+                          Cheeral(p.o),<br />Sulthan Bathery,<br />Wayanad,<br />kerala,<br />India
+                        </p>
+                      </div>
+                    </div>
+                    <div class="dbox w-100 d-flex align-items-center">
+                      <div
+                        class="icon d-flex align-items-center justify-content-center"
+                      >
+                        <span class="fa fa-phone"></span>
+                      </div>
+                      <div class="text pl-3">
+                        <p>
+                          <span>Phone:</span>
+                          <a href="tel:+91 854 793 58991"
+                            ><span>+91 854 793 5899</span></a
+                          >
+                          <br />
+                          <span>Phone:</span>
+                          <a href="tel:+91 623 573 6921"
+                            ><span>+91 623 573 6921</span>
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="dbox w-100 d-flex align-items-center">
+                      <div
+                        class="icon d-flex align-items-center justify-content-center"
+                      >
+                        <span class="fa fa-paper-plane"></span>
+                      </div>
+                      <div class="text pl-3">
+                        <p>
+                          <span>Email:</span>
+                          <a href="https://www.gmail.com" target="blank"
+                            ><span>esaecosoilutions@gmail.com</span></a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <div class="dbox w-100 d-flex align-items-center">
+                      <div
+                        class="icon d-flex align-items-center justify-content-center"
+                      >
+                        <span class="fa fa-globe"></span>
+                      </div>
+                      <div class="text pl-3">
+                        <p>
+                          <span>Website:</span>
+                          <a href="index.html"
+                            ><span> esaecosolutions.in</span></a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!--================End Home Banner Area =================-->
-
     <!--================ start footer Area  =================-->
+    <!-- Footer -->
     <footer
       class="text-center text-lg-start text-dark"
       style="background-color: #eceff1"
@@ -203,29 +355,33 @@
       >
         <!-- Left -->
         <div class="me-5">
-          <span>Get connected with us on social networks:</span>
+          <span>Follow and connect with us on social networks: </span>
         </div>
         <!-- Left -->
 
         <!-- Right -->
         <div>
-          <a href="" class="text-white me-4">
+          <a
+            href="https://www.facebook.com/esa_ecosolutions-121180793060035"
+            class="text-white me-4"
+            target="_blank"
+          >
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="" class="text-white me-4">
+
+          <a
+            href="https://www.instagram.com/esa_ecosolutions/"
+            class="text-white me-4"
+            target="_blank"
+          >
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-github"></i>
+          <a
+            href="https://www.esaecosoilutions.in"
+            class="text-white me-4"
+            target="_blank"
+          >
+            <i class="fab fa-google"></i>
           </a>
         </div>
         <!-- Right -->
@@ -240,15 +396,14 @@
             <!-- Grid column -->
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               <!-- Content -->
-              <h6 class="text-uppercase fw-bold">Company name</h6>
+              <h6 class="text-uppercase fw-bold">ESA Eco Solutions</h6>
               <hr
                 class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
+                style="width: 60px; background-color: #9020e7; height: 2px"
               />
               <p>
-                Here you can use rows and columns to organize your footer
-                content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit.
+                A comprehensive solution for all packing and luggage carrying
+                problems.
               </p>
             </div>
             <!-- Grid column -->
@@ -256,22 +411,22 @@
             <!-- Grid column -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Products</h6>
+              <h6 class="text-uppercase fw-bold">Popular Products</h6>
               <hr
                 class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
+                style="width: 60px; background-color: #9020e7; height: 2px"
               />
               <p>
-                <a href="#!" class="text-dark">MDBootstrap</a>
+                <a href="#!" class="text-dark">Cake Bag</a>
               </p>
               <p>
-                <a href="#!" class="text-dark">MDWordPress</a>
+                <a href="#!" class="text-dark">Textile Bag</a>
               </p>
               <p>
-                <a href="#!" class="text-dark">BrandFlow</a>
+                <a href="#!" class="text-dark">Mobile bags</a>
               </p>
               <p>
-                <a href="#!" class="text-dark">Bootstrap Angular</a>
+                <a href="#!" class="text-dark">Disposible Covers</a>
               </p>
             </div>
             <!-- Grid column -->
@@ -279,22 +434,22 @@
             <!-- Grid column -->
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Useful links</h6>
+              <h6 class="text-uppercase fw-bold">Our Specialities</h6>
               <hr
                 class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
+                style="width: 60px; background-color: #9020e7; height: 2px"
               />
               <p>
-                <a href="#!" class="text-dark">Your Account</a>
+                <a href="#!" class="text-dark">Customised bags</a>
               </p>
               <p>
-                <a href="#!" class="text-dark">Become an Affiliate</a>
+                <a href="#!" class="text-dark">Screen printed logo and name</a>
               </p>
               <p>
-                <a href="#!" class="text-dark">Shipping Rates</a>
+                <a href="#!" class="text-dark">Disposible covers for bakery</a>
               </p>
               <p>
-                <a href="#!" class="text-dark">Help</a>
+                <a href="#!" class="text-dark">Disposible covers for grocery</a>
               </p>
             </div>
             <!-- Grid column -->
@@ -302,15 +457,34 @@
             <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Contact</h6>
+              <h6 class="text-uppercase fw-bold">contact Us</h6>
               <hr
                 class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
+                style="width: 60px; background-color: #9020e7; height: 2px"
               />
-              <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-              <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
-              <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-              <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+              <p><i class="fas fa-home mr-3"></i>Cheeral , Wayanad</p>
+              <p>
+                <a
+                  href="https://mailto:esaecosolutions@gmail.com"
+                  class="mailIndex"
+                >
+                  <i class="fas fa-envelope mr-3"></i>
+                  esaecosolutions@gmail.com</a
+                >
+              </p>
+              <p>
+                <i class="fas fa-phone mr-3"></i>
+                <a href="tel:+91 854 793 5899" class="phone1">
+                  +91 854 793 5899
+                </a>
+              </p>
+
+              <p>
+                <i class="fa-brands fa-whatsapp mr-3"></i>
+                <a href="tel:+91 623 573 6921" class="phone2">
+                  +91 623 573 6921
+                </a>
+              </p>
             </div>
             <!-- Grid column -->
           </div>
@@ -321,8 +495,10 @@
 
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2020 Copyright:
-        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        2022 ©
+        <a class="text-dark" href="index.html">
+          ESA Eco Solutions | All Rights Reserved.
+        </a>
       </div>
       <!-- Copyright -->
     </footer>
@@ -393,7 +569,13 @@
     <script src="js/contact.js"></script>
     <!--gmaps Js-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/gmaps.min.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
