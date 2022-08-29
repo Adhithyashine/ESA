@@ -2976,7 +2976,7 @@ h6 {
   overflow: hidden;
 }
 .single-product .product-img .p_icon {
-  width: 90%;
+  width: 100%;
   padding: 7px 30px;
   position: absolute;
   bottom: -100px;
@@ -2986,7 +2986,7 @@ h6 {
   -o-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  background: rgba(113, 205, 20, 0.4);
+  background: rgba(114, 214, 13, 0.738);
   transition: all 400ms ease;
 }
 .single-product .product-img .p_icon a {

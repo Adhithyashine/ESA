@@ -52,6 +52,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
   <body>
@@ -85,62 +86,20 @@
               <div class="row w-100 mr-0">
                 <div class="col-lg-7 pr-0">
                   <ul class="nav navbar-nav center_nav pull-right">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                       <a class="nav-link" href="index.html">Home</a>
                     </li>
-                    <li class="nav-item submenu dropdown">
-                      <a
-                        href="#"
-                        class="nav-link dropdown-toggle"
-                        data-toggle="dropdown"
-                        role="button"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                        >Shop</a
-                      >
-                      <ul class="dropdown-menu">
-                        <li class="nav-item">
-                          <a class="nav-link" href="category.html"
-                            >Shop Category</a
-                          >
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="single-product.html"
-                            >Product Details</a
-                          >
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="checkout.html"
-                            >Product Checkout</a
-                          >
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="cart.html">Shopping Cart</a>
-                        </li>
-                      </ul>
+                    <li class="nav-item">
+                      <a class="nav-link" href="products.html">products </a>
                     </li>
-                    <li class="nav-item submenu dropdown">
+
+                    <li class="nav-item">
                       <a class="nav-link" href="aboutus.html">About Us </a>
                     </li>
-                    <li class="nav-item submenu dropdown">
-                      <a
-                        href="#"
-                        class="nav-link dropdown-toggle"
-                        data-toggle="dropdown"
-                        role="button"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                        >Pages</a
-                      >
-                      <ul class="dropdown-menu">
-                        <li class="nav-item">
-                          <a class="nav-link" href="tracking.html">Tracking</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="elements.html">Elements</a>
-                        </li>
-                      </ul>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Shop </a>
                     </li>
+
                     <li class="nav-item">
                       <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
@@ -200,10 +159,10 @@
                       Your message was sent, thank you!
                     </div>
                     <form
-                      method="POST"
-                      id="contactForm"
+                      id="submit-form"
                       name="contactForm"
                       class="contactForm"
+                      action=""
                     >
                       <div class="row">
                         <div class="col-md-12">
@@ -231,11 +190,11 @@
                         <div class="col-md-12">
                           <div class="form-group">
                             <input
-                              type="text"
+                              type="tel"
                               class="form-control"
-                              name="subject"
-                              id="subject"
-                              placeholder="Subject"
+                              name="phone"
+                              id="phone"
+                              placeholder="Phone number"
                             />
                           </div>
                         </div>
@@ -414,7 +373,7 @@
               <h6 class="text-uppercase fw-bold">Popular Products</h6>
               <hr
                 class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #9020e7; height: 2px"
+                style="width: 60px; background-color: #9120e7; height: 2px"
               />
               <p>
                 <a href="#!" class="text-dark">Cake Bag</a>
@@ -577,5 +536,23 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      $('#submit-form').submit((e) => {
+        e.preventDefault();
+        $.ajax({
+          url: 'https://script.google.com/macros/s/AKfycbyLK-4kJUuSRMdlPtb1Q91vVxN5x3z3B4s5lUBm/exec',
+          data: $('#submit-form').serialize(),
+          method: 'post',
+          success: function (response) {
+            alert('Form submitted successfully');
+            window.location.reload();
+            //window.location.href="https://google.com"
+          },
+          error: function (err) {
+            alert('Something Error');
+          },
+        });
+      });
+    </script>
   </body>
 </html>
